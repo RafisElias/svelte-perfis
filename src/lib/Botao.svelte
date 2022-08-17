@@ -1,4 +1,5 @@
 <script lang="ts">
+  import lupa from '../assets/lupa.svg';
   export let loading = false;
 </script>
 
@@ -6,7 +7,7 @@
   <slot name="label">Buscar</slot>
   {#if !loading}
     <slot name="icone">
-      <img src="src/assets/lupa.svg" alt="ícone de lupa" />
+      <img src={lupa} alt="ícone de lupa" />
     </slot>
   {/if}
 </button>
