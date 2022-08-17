@@ -17,9 +17,7 @@
   const onSubmit = async () => {
     loading = true;
     const { data: user, status } = await buscaUsuario(valorInput);
-    const { data: repos, status: reposStatus } = await buscaRepositorios(
-      valorInput
-    );
+    const { data: repos } = await buscaRepositorios(valorInput);
 
     if (user && repos) {
       const usuario = {
